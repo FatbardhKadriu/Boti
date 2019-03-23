@@ -1,8 +1,9 @@
 const Discord = require('discord.js')
+const math = require('mathjs')
 const client = new Discord.Client()
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`)
+  console.log(`Logged in as ${ client.user.tag }!`)
 })
 
 client.on('message', msg => {
@@ -11,7 +12,12 @@ client.on('message', msg => {
     return
   }
 
-  msg.reply('Ju keni thene: ' + msg.content)
+  const trigger = 'llogarit'
+  if (msg.content.startsWith(trigger)) {
+    const expr = msg.content.substr(trigger.length)
+    const result = math.eval(expr)
+    msg.reply(result)
+  }
 })
 
-client.login('NTU5MDcyMTUwMjUwODQ4Mjcw.D3gESw.43J9JfZysk2aRcKpf3P0W8-Fuhk')
+client.login(process.env.BOT_TOKEN)

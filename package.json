@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/FatbardhKadriu/Boti#readme",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "mathjs": "^5.8.0"
   }
 }
