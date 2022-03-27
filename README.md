@@ -1,2 +1,2 @@
-# Boti
+# test-discord-bot
 
