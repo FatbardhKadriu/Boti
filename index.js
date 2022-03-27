@@ -2,22 +2,24 @@ const Discord = require('discord.js')
 const math = require('mathjs')
 const client = new Discord.Client()
 
+require('dotenv').config()
+
 client.on('ready', () => {
   console.log(`Logged in as ${ client.user.tag }!`)
 })
 
 client.on('message', msg => {
   if (msg.author.bot) {
-    // mos i reago botave
+    // don't react to bots
     return
   }
 
-  const trigger = 'llogarit'
+  const trigger = 'calc'
   if (msg.content.startsWith(trigger)) {
-    const expr = msg.content.substr(trigger.length)
-    const result = math.eval(expr)
-    msg.reply(result)
+    const expr = msg.content.split(" ");
+    const result = eval(expr[1])
+    msg.reply("Result is: " +result);
   }
 })
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.DISCORD_TOKEN)

@@ -1,5 +1,5 @@
 {
-  "name": "Boti",
+  "name": "alphabot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,17 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FatbardhKadriu/Boti.git"
+    "url": "git+https://github.com/FatbardhKadriu/discord-bot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FatbardhKadriu/Boti/issues"
+    "url": "https://github.com/FatbardhKadriu/discord-bot/issues"
   },
-  "homepage": "https://github.com/FatbardhKadriu/Boti#readme",
+  "homepage": "https://github.com/FatbardhKadriu/discord-bot#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
-    "mathjs": "^5.8.0"
+    "mathjs": "^10.4.1",
+    "dotenv": "^16.0.0"
   }
 }
